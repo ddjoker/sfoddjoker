@@ -19,11 +19,17 @@
             <artifactId>log4j</artifactId>
             <version>RELEASE</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
         <dependency>
-            <groupId></groupId>
+            <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
         </dependency>
     </dependencies>
+
+    <properties>
+        <guava.version>20.0</guava.version>
+    </properties>
 
 
 </project>
