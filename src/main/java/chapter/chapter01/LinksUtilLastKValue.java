@@ -4,12 +4,10 @@ import java.util.LinkedList;
 
 /**
  *
- * 获取链表中倒数K位的值
- *
  * 关键是注意各种的异常情况
  * Created by dong on 2016/12/7.
  */
-public class LinksLastKValue {
+public class LinksUtilLastKValue {
 
     public static String value(LinkedList<String> stringLinkedList, int k) {
         if (stringLinkedList == null)

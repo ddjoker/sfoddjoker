@@ -11,17 +11,15 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.LinkedList;
 
-import static org.junit.Assert.*;
-
 /**
  * Created by dong on 2016/12/7.
  */
 @RunWith(Parameterized.class)
-public class LinksLastKValueTest {
+public class LinksUtilLastKValueTest {
     private int iSeat;
     private String value;
 
-    public LinksLastKValueTest(int iSeat, String value) {
+    public LinksUtilLastKValueTest(int iSeat, String value) {
         this.iSeat = iSeat;
         this.value = value;
     }
@@ -30,12 +28,12 @@ public class LinksLastKValueTest {
 
     @Test
     public void stringLinkedList() {
-        Assert.assertEquals(value, LinksLastKValue.value(linkedList, iSeat));
+        Assert.assertEquals(value, LinksUtilLastKValue.value(linkedList, iSeat));
     }
 
     @Test
     public void stringLinkedListNull() {
-        Assert.assertEquals(null, LinksLastKValue.value(null, iSeat));
+        Assert.assertEquals(null, LinksUtilLastKValue.value(null, iSeat));
     }
 
 
