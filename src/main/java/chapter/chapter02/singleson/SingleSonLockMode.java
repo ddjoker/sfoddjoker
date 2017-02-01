@@ -16,6 +16,11 @@ public class SingleSonLockMode {
   private static Byte[] lock = new Byte[0];
   private static SingleSonLockMode _instance = null;
 
+  /**
+   * Gets instance.
+   *
+   * @return the instance
+   */
   public synchronized static SingleSonLockMode getInstance() {
     if (_instance == null) {
       _instance = new SingleSonLockMode();
@@ -23,6 +28,11 @@ public class SingleSonLockMode {
     return _instance;
   }
 
+  /**
+   * Gets lock instance.
+   *
+   * @return the lock instance
+   */
   public static SingleSonLockMode getLockInstance() {
     synchronized (lock) {
       if (_instance == null) {

@@ -12,6 +12,11 @@ public class SingleSonSingleThread {
 
   private static SingleSonSingleThread _instance = null;
 
+  /**
+   * Gets instance.
+   *
+   * @return the instance
+   */
   public static SingleSonSingleThread getInstance() {
     if (_instance == null) {
       _instance = new SingleSonSingleThread();

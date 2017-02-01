@@ -30,7 +30,7 @@ public class LinkModelLastKValue {
     }
 
     if (latterModel != null) {
-      return latterModel.getT();
+      return latterModel.getValue();
     }
     return null;
   }

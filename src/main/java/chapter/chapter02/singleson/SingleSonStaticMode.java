@@ -14,6 +14,11 @@ public class SingleSonStaticMode {
 
   private static SingleSonStaticMode _instance = new SingleSonStaticMode();
 
+  /**
+   * Gets instance.
+   *
+   * @return the instance
+   */
   public static SingleSonStaticMode getInstance() {
     return _instance;
   }

@@ -19,6 +19,11 @@ public class SingleSonInnerClassMode {
   }
 
 
+  /**
+   * Gets instance.
+   *
+   * @return the instance
+   */
   public static SingleSonInnerClassMode getInstance() {
     return Instance._instance;
   }
@@ -33,6 +38,9 @@ public class SingleSonInnerClassMode {
       System.out.println("SingleSonInnerClassMode  Instance  Static");
     }
 
+    /**
+     * The constant _instance.
+     */
     public final static SingleSonInnerClassMode _instance = new SingleSonInnerClassMode();
   }
 }
