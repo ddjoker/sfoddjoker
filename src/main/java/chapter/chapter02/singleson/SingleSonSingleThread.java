@@ -5,15 +5,18 @@ package chapter.chapter02.singleson;
  * Created by dong on 2016/12/10.
  */
 public class SingleSonSingleThread {
-    private SingleSonSingleThread(){
 
-    }
-    private  static SingleSonSingleThread _instance = null;
+  private SingleSonSingleThread() {
 
-    public static SingleSonSingleThread getInstance(){
-        if (_instance ==null)
-            _instance = new SingleSonSingleThread();
-        return _instance;
+  }
+
+  private static SingleSonSingleThread _instance = null;
+
+  public static SingleSonSingleThread getInstance() {
+    if (_instance == null) {
+      _instance = new SingleSonSingleThread();
     }
+    return _instance;
+  }
 
 }

@@ -7,30 +7,32 @@ package chapter.chapter02.singleson;
  * Created by dong on 2016/12/10.
  */
 public class SingleSonInnerClassMode {
-    private SingleSonInnerClassMode() {
-        //第三层调用
-        System.out.println("SingleSonInnerClassMode  Constructor ");
-    }
+
+  private SingleSonInnerClassMode() {
+    //第三层调用
+    System.out.println("SingleSonInnerClassMode  Constructor ");
+  }
+
+  static {
+    // 第一层调用
+    System.out.println("SingleSonInnerClassMode Static");
+  }
+
+
+  public static SingleSonInnerClassMode getInstance() {
+    return Instance._instance;
+  }
+
+  /**
+   * 不允许外界显示调用
+   */
+  private static class Instance {
 
     static {
-        // 第一层调用
-        System.out.println("SingleSonInnerClassMode Static");
+      //第二层调用
+      System.out.println("SingleSonInnerClassMode  Instance  Static");
     }
 
-
-    public static SingleSonInnerClassMode getInstance() {
-        return Instance._instance;
-    }
-
-    /**
-     * 不允许外界显示调用
-     */
-    private static class Instance {
-        static {
-            //第二层调用
-            System.out.println("SingleSonInnerClassMode  Instance  Static");
-        }
-
-        public final static SingleSonInnerClassMode _instance = new SingleSonInnerClassMode();
-    }
+    public final static SingleSonInnerClassMode _instance = new SingleSonInnerClassMode();
+  }
 }

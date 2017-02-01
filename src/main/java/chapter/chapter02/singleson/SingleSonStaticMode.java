@@ -7,14 +7,15 @@ package chapter.chapter02.singleson;
  * Created by dong on 2016/12/10.
  */
 public class SingleSonStaticMode {
-    private SingleSonStaticMode() {
 
-    }
+  private SingleSonStaticMode() {
 
-    private static SingleSonStaticMode _instance = new SingleSonStaticMode();
+  }
 
-    public static SingleSonStaticMode getInstance() {
-        return _instance;
-    }
+  private static SingleSonStaticMode _instance = new SingleSonStaticMode();
+
+  public static SingleSonStaticMode getInstance() {
+    return _instance;
+  }
 
 }

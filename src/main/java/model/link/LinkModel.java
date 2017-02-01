@@ -5,37 +5,38 @@ package model.link;
  * Created by dong on 2016/12/7.
  */
 public class LinkModel<T> {
-    private LinkModel<T> previous;
 
-    private T t ;
+  private LinkModel<T> previous;
 
-    private LinkModel<T> latter;
+  private T t;
 
-    public void setPrevious(LinkModel<T> previous) {
-        this.previous = previous;
-    }
+  private LinkModel<T> latter;
 
-    public void setLatter(LinkModel<T> latter) {
-        this.latter = latter;
-    }
+  public void setPrevious(LinkModel<T> previous) {
+    this.previous = previous;
+  }
 
-    public void setT(T t) {
-        this.t = t;
-    }
+  public void setLatter(LinkModel<T> latter) {
+    this.latter = latter;
+  }
 
-    public LinkModel<T> getLatter() {
-        return latter;
-    }
+  public void setT(T t) {
+    this.t = t;
+  }
 
-    public LinkModel<T> getPrevious() {
-        return previous;
-    }
+  public LinkModel<T> getLatter() {
+    return latter;
+  }
 
-    public T getT() {
-        return t;
-    }
+  public LinkModel<T> getPrevious() {
+    return previous;
+  }
 
-    public LinkModel(T t) {
-        this.t = t;
-    }
+  public T getT() {
+    return t;
+  }
+
+  public LinkModel(T t) {
+    this.t = t;
+  }
 }

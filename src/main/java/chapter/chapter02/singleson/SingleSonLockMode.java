@@ -8,25 +8,28 @@ package chapter.chapter02.singleson;
  * Created by dong on 2016/12/10.
  */
 public class SingleSonLockMode {
-    private SingleSonLockMode() {
 
+  private SingleSonLockMode() {
+
+  }
+
+  private static Byte[] lock = new Byte[0];
+  private static SingleSonLockMode _instance = null;
+
+  public synchronized static SingleSonLockMode getInstance() {
+    if (_instance == null) {
+      _instance = new SingleSonLockMode();
     }
+    return _instance;
+  }
 
-    private static Byte[] lock = new Byte[0];
-    private static SingleSonLockMode _instance = null;
-
-    public synchronized static SingleSonLockMode getInstance() {
-        if (_instance == null)
-            _instance = new SingleSonLockMode();
-        return _instance;
+  public static SingleSonLockMode getLockInstance() {
+    synchronized (lock) {
+      if (_instance == null) {
+        _instance = new SingleSonLockMode();
+      }
     }
-
-    public static SingleSonLockMode getLockInstance() {
-        synchronized (lock) {
-            if (_instance == null)
-                _instance = new SingleSonLockMode();
-        }
-        return _instance;
-    }
+    return _instance;
+  }
 
 }
