@@ -6,20 +6,20 @@ package model.link;
  *
  * @param <T> the type parameter
  */
-public class LinkModel<T> {
+public class DoublyLinkModel<T> {
 
-  private LinkModel<T> previous;
+  private DoublyLinkModel<T> previous;
 
   private T value;
 
-  private LinkModel<T> latter;
+  private DoublyLinkModel<T> latter;
 
   /**
    * Sets previous.
    *
    * @param previous the previous
    */
-  public void setPrevious(LinkModel<T> previous) {
+  public void setPrevious(DoublyLinkModel<T> previous) {
     this.previous = previous;
   }
 
@@ -28,7 +28,7 @@ public class LinkModel<T> {
    *
    * @param latter the latter
    */
-  public void setLatter(LinkModel<T> latter) {
+  public void setLatter(DoublyLinkModel<T> latter) {
     this.latter = latter;
   }
 
@@ -46,7 +46,7 @@ public class LinkModel<T> {
    *
    * @return the latter
    */
-  public LinkModel<T> getLatter() {
+  public DoublyLinkModel<T> getLatter() {
     return latter;
   }
 
@@ -55,7 +55,7 @@ public class LinkModel<T> {
    *
    * @return the previous
    */
-  public LinkModel<T> getPrevious() {
+  public DoublyLinkModel<T> getPrevious() {
     return previous;
   }
 
@@ -73,7 +73,7 @@ public class LinkModel<T> {
    *
    * @param t the value
    */
-  public LinkModel(T t) {
+  public DoublyLinkModel(T t) {
     this.value = t;
   }
 }

@@ -1,6 +1,6 @@
 package chapter.chapter01;
 
-import model.link.LinkModel;
+import model.link.DoublyLinkModel;
 
 /**
  * 求链表的倒数第K个节点
@@ -8,13 +8,13 @@ import model.link.LinkModel;
  */
 public class LinkModelLastKValue {
 
-  public static <T> T value(LinkModel<T> linkHead, int k) {
+  public static <T> T value(DoublyLinkModel<T> linkHead, int k) {
     if (linkHead == null) {
       return null;
     }
-    LinkModel<T> latterModel = null;
+    DoublyLinkModel<T> latterModel = null;
 
-    LinkModel<T> tempLinkHead = linkHead;
+    DoublyLinkModel<T> tempLinkHead = linkHead;
 
     for (int i = 0, j = 0; tempLinkHead.getLatter() != null; i++) {
 

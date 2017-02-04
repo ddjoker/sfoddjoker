@@ -1,6 +1,6 @@
 package chapter.chapter01;
 
-import model.link.LinkModel;
+import model.link.DoublyLinkModel;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
@@ -10,8 +10,8 @@ import org.junit.Test;
  * 求链表的倒数第K个节点
  * Created by dong on 2016/12/7.
  */
-public class LinkModelLastKValueTest {
-    private static LinkModel<Integer> linkHead = null;
+public class DoublyLinkModelLastKValueTest {
+    private static DoublyLinkModel<Integer> linkHead = null;
 
 
     @Test
@@ -26,10 +26,10 @@ public class LinkModelLastKValueTest {
 
     @BeforeClass
     public static void init() {
-        linkHead = new LinkModel<Integer>(0);
-        LinkModel<Integer> temp = linkHead;
+        linkHead = new DoublyLinkModel<Integer>(0);
+        DoublyLinkModel<Integer> temp = linkHead;
         for (int i = 1; i <= 10; i++) {
-            temp.setLatter(new LinkModel<Integer>(i));
+            temp.setLatter(new DoublyLinkModel<Integer>(i));
             temp = temp.getLatter();
         }
     }
