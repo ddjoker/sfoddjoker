@@ -9,6 +9,13 @@ import test.TestSupport;
  */
 public class BtreeUtilTest extends TestSupport {
 
+  private Integer[] preorder = {1,2,4,7,3,5,6,8};
+  private Integer[] inorder ={4,7,2,1,5,3,8,6};
+  @Test
+  public void rebuildBtree() throws Exception {
+    logger.info(toJson(BtreeUtil.<Integer>rebuildBtree(preorder,inorder)));
+  }
+
   @Test
   public void afterSequeuLoopTraversal() throws Exception {
     BtreeUtil.afterSequeuLoopTraversal(initBTree());
