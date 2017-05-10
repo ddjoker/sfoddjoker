@@ -13,6 +13,14 @@ import test.TestSupport;
  */
 public class QuickSortTest extends TestSupport {
 
+  @Test
+  public void quickSort() throws Exception {
+
+    QuickSort quickSort = new QuickSort();
+    quickSort.quickSort(data, 0, data.length - 1);
+    logger.info(toJson(data));
+  }
+
   private Integer[] data;
 
   @Before
