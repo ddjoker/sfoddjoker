@@ -10,7 +10,7 @@ public class ShellSort {
     int length = array.length;
     int temp = 0;
     for (int gap = length / 2; gap >= 1; gap = gap / 2)
-      for (int i = gap; i < length; i++)
+      for (int i = 0; i < length; i++)
         for (int j = i; j >= gap && array[j] < array[j - gap]; j -= gap) {
           temp = array[j];
           array[j] = array[j - gap];
